@@ -1,0 +1,282 @@
+/* Custom Font */
+
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@500&display=swap');
+
+/* Default */
+
+*{
+    padding: 0%; margin: 0%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    transition: .5s ease;
+}
+
+/* Here we gonna define the "essentials" for the code work. */
+
+:root{
+    /* Font to get things more easily. */
+    --exo: 'Exo 2', sans-serif;
+
+    /* Base Colors */
+
+    --mirage:#1d213a;
+    --mirage-container:#16182d; 
+    --canCan-secondary: #fc4e89;
+    --text-color: #cdccd2;
+
+    /* The Things Falling from the "Sky" */
+
+    --royal-blue: #4148E8;
+    --malibu: #dcffff;
+    --pink: #fd5086;
+    --royal-pink: #9d274a;
+    --yellow:#f3ab2e;
+}
+ 
+/* Global classes */
+
+body{
+    background-color: var(--mirage) ;
+}
+
+html{
+    color: var(--text-color);
+    font-family: var(--exo);
+    scroll-behavior: smooth;
+}
+
+.swiper .swiper-wrapper .swiper-slide .mySwiper{
+    width: 550px;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+h1{
+    color: var(--malibu);
+}
+
+p{
+    text-decoration: none;
+}
+
+a{
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+ul{
+    list-style-type: none;
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;    
+    flex-wrap: wrap;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    min-height: 110vh;
+    background: var(--mirage-container);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    padding-bottom: 150px;
+}
+
+.container form{
+    background: url(./assets/bp.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 800px;
+    width: 1750px;
+    background-color: var(--mirage-container) ;
+    padding: 10px;
+    box-shadow: 2px 2px 5px rgba(255, 255, 255, .1);
+    border-radius: 2rem;
+    border: 3.5px solid #fff;
+}
+
+.container .box{
+    position: absolute;
+    left: 6.5rem;
+    width: 50%;
+}
+
+.container .box{
+    padding-top: 50px;
+    border: none;
+    outline: none;
+    margin: 40px;
+    width: 35%;
+    height: 75%;
+}
+
+.container .box h1{
+    padding-top: 5px;
+    letter-spacing: 3px;
+    font-size: 50px;
+}
+
+.container .box h2{
+    padding: 8px;
+    letter-spacing: 3px;
+    font-size: 35px;
+    color: #fff;
+}
+
+.container .box p{
+    padding-top: 20px;
+    font-size: 16px;
+}
+
+.container .box button.btn{
+    margin-top: 40px;
+    margin-right: 20px;
+}
+
+button.btn{
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 180px;
+    border-radius: 50rem;
+    color: #fff;
+    background: #d84783;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    margin: 14px 0;
+    cursor: pointer;
+    text-shadow: 0 2px 8px rgba(255, 255, 255, .6);   
+}
+
+.container form .img{
+    display: block;
+    display: block;
+    margin-left: 1300px;
+    width: 25%;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Navigation */
+
+.icon{
+    color: #fefffb;
+}
+
+.nav{
+    padding: 0 2.5rem;
+    overflow: hidden;
+    transition: .8s ease-in-out;
+}
+
+.nav .nav-menu {
+    justify-content: space-between;
+}
+
+.nav .nav-items{
+    padding-left: 550px;
+    display: flex;
+    margin: 0%;
+}
+
+.nav .nav-items .nav-link {
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    position: relative;
+    margin-left: 10px;
+}
+
+.nav .nav-items .nav-link:hover a{
+    color: var(--canCan-secondary);
+}
+
+.nav .nav-brand a{
+    padding: 1rem 0;
+    display: block;
+    font-family: var(--CorinthiaBold);
+    font-size: 1.2rem;
+}
+
+/* Navigation */
+
+
+/* Carousel */
+
+.container .box .slideshow-container{
+    width: 100%;
+    height: 30%;
+
+}
+
+.container .box .slideshow-container{
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.slideshow-container .card .image{
+    height: 225px;
+    width: 200px;
+}
+
+
+.slideshow-container img{
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    border-radius: .7rem;
+}
+
+.card{
+    position: relative;
+    background: var(--mirage-container);
+}
+.card .card-content{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+}
+
+
+
+/* Things Falling from the Sky */
+
+.container span{
+    position: absolute;
+    background: #eb94ad;
+    z-index: 1;
+    pointer-events: none;
+    animation: anime 10s ease-out infinite;
+}
+
+@keyframes anime{
+    0%{
+        transform: translateY(-600px) scale(0) rotate(0deg);
+        opacity: 0;
+    }
+    10%{
+        opacity: 1;
+    }
+    90%{
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(1200px) scale(1) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Responsive Way */
